@@ -1,5 +1,6 @@
 import {Menu, X} from  "lucide-react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.jpg";
 import { navItems } from "../constants";
 
@@ -15,23 +16,37 @@ const Navbar = () => {
         <div className="container px-4 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
                 <div className="flex items-center flex-shrink-0">
-                    <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
-                    <span className="text-xl tracking-tight">Nammalvar Eyarkaiyagam</span>
+                    <Link to="/" className="flex items-center"> {/* Link for logo */}
+                      <img className="h-10 w-10 mr-2" src={logo} alt="Nammalvar Eyarkaiyagam Logo" />
+                      <span className="text-xl tracking-tight">Nammalvar Eyarkaiyagam</span>
+                    </Link>
                 </div>
                 <ul className="hidden lg:flex ml-14 space-x-12">
                   {navItems.map((item, index) => (
                     <li key={index}>
-                      <a href={item.href}>{item.label}</a>
+                      {/* Use Link for client-side navigation, regular <a> for external or #hash links on same page */}
+                      {item.href.startsWith('/') ? (
+                        <Link to={item.href} className="hover:text-green-400 transition-colors">
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a href={item.href} className="hover:text-green-400 transition-colors">
+                          {item.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 items-center">
-                  <a href="#" className="py-2 px-3 border rounded-md">
+                  <a href="tel:+91XXXXXXXXXX" className="py-2 px-3 border rounded-md hover:border-green-500 transition-colors">
                     Call to Order
                   </a>
-                  <a href="#" className="bg-gradient-to-r from-green-600 to-green-700 py-2 px-3 rounded-md">
-                    Visit Us
-                  </a>
+                  <Link
+                    to="/#footer" // Example: Link to contact section on homepage
+                    className="bg-gradient-to-r from-green-500 to-green-800 py-2 px-3 rounded-md hover:from-green-600 hover:to-green-700 transition-all"
+                  >
+                    Find Us
+                  </Link>
                 </div>
                 <div className="lg:hidden md:flex flex-col justify-end">
                   <button onClick={toggleNavbar}>
@@ -44,17 +59,29 @@ const Navbar = () => {
                 <ul>
                   {navItems.map((item, index) => (
                     <li key={index} className="py-4">
-                      <a href={item.href}>{item.label}</a>
+                      {item.href.startsWith('/') ? (
+                        <Link to={item.href} onClick={toggleNavbar} className="hover:text-green-400 transition-colors">
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a href={item.href} onClick={toggleNavbar} className="hover:text-green-400 transition-colors">
+                          {item.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
                 <div className="flex space-x-6">
-                  <a href="#" className="py-2 px-3 border rounded-md">
-                    Sign In
+                  <a href="tel:+91XXXXXXXXXX" className="py-2 px-3 border rounded-md">
+                    Call to Order
                   </a>
-                  <a href="#" className="py-2 px-3 bg-gradient-to-r from-green-600 to-green-700 rounded-md">
-                    Create an Account
-                  </a>
+                  <Link
+                    to="/#footer"
+                    onClick={toggleNavbar}
+                    className="py-2 px-3 rounded-md bg-gradient-to-r from-green-500 to-green-800"
+                  >
+                    Find Us
+                  </Link>
                 </div>
               </div>
             )}
