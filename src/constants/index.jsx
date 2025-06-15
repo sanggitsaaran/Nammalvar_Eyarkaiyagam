@@ -216,133 +216,426 @@ import palmJaggeryImg from "../assets/products/palm-jaggery.jpg";
 // import pureForestHoneyImg from "../assets/products/pure-forest-honey.jpg";
 
 export const productCategories = [
-  "Cold-pressed Oil Products",
-  "Traditional Rice Varieties",
-  "Spice Products",
-  "Pulse Varieties",
-  "Herbal Health Products",
-  "Natural Soaps",
-  "Traditional Products (Jaggery)", // Renamed for clarity
-  "Fresh Health Greens", // Renamed for clarity (was Health Products)
-  "Ghee Products",
-  "Traditional Grains & Millets", // Renamed for clarity
-  "Natural Health Tonics", // Renamed for clarity (was Natural Health Products)
-  "Millet & Rice Noodles", // Renamed for clarity
-  "Honey & Natural Sweeteners", // Renamed for clarity
-  "Traditional Medicinal Herbs", // Renamed for clarity
+  "Traditional Rice Varieties & Flours", // Combined Rice, Aval, Puttu Flour, Kanji Mix
+  "Millets",
+  "Natural Sweeteners & Honey",
+  "Spice Powders & Masalas",
+  "Cold-Pressed Oils & Ghee",
+  "Dals & Pulses (Paruppu & Payaru)",
+  "Herbal & Special Products", // For items like Hair Oil, Pazhangal Kandu Podi
 ];
 
 export const products = [
-  // Cold-pressed Oil Products
+  // --- Traditional Rice Varieties & Flours ---
   {
-    id: "cpo001",
-    name: "Cold-Pressed Sesame Oil (Nallennai)",
-    category: "Cold-pressed Oil Products",
-    image: sesameOilImg,
-    description: "Pure, wood-pressed sesame oil, rich in nutrients and traditional flavor.",
-    price_info: "₹350 / Litre",
-  },
-  {
-    id: "cpo002",
-    name: "Cold-Pressed Coconut Oil (Thengai Ennai)",
-    category: "Cold-pressed Oil Products",
-    image: coconutOilImg,
-    description: "Fragrant and healthy cold-pressed coconut oil, perfect for cooking and hair care.",
-    price_info: "₹320 / Litre",
+    id: "trv001",
+    name: "கருப்பு கவுனி (Karuppu Kavuni Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Black Kavuni Rice", // Simplified
+    price_info: "₹220 / Kg"
   },
   {
-    id: "cpo003",
-    name: "Cold-Pressed Groundnut Oil (Kadalai Ennai)",
-    category: "Cold-pressed Oil Products",
-    image: placeholderImg, // Replace with actual import
-    description: "Nutritious cold-pressed groundnut oil with a mild, pleasant aroma.",
-    price_info: "₹350 / Litre",
-  },
-  { 
-    id: "cpo004", 
-    name: "Cold-Pressed Sunflower Oil (Suryakanthi Ennai)", 
-    category: "Cold-pressed Oil Products", 
-    image: placeholderImg, 
-    description: "Light and healthy, a good source of Vitamin E. Suitable for various cuisines.", 
-    price_info: "₹280 / Litre" 
-  },
-  // Traditional Rice Varieties
-  {
-    id: "tr001",
-    name: "Karuppu Kavuni (Black Rice)",
-    category: "Traditional Rice Varieties",
-    image: blackRiceImg,
-    description: "Nutrient-rich traditional black rice, known for its antioxidant properties.",
-    price_info: "₹180 / Kg",
+    id: "trv002",
+    name: "கருங் குருவை (Karung Kuruvai Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Black Kuruvai Rice", // Simplified
+    price_info: "₹200 / Kg"
   },
   {
-    id: "tr002",
-    name: "Poongar Rice (Red Rice)",
-    category: "Traditional Rice Varieties",
-    image: redRiceImg,
-    description: "A traditional red rice variety, excellent for overall health and well-being.",
-    price_info: "₹150 / Kg",
+    id: "trv003",
+    name: "காட்டு யானம் (Kaatuyanam Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Wild Elephant Rice", // Simplified
+    price_info: "₹190 / Kg"
   },
-  { id: "tr003", name: "Mappillai Samba (Bridegroom's Rice)", category: "Traditional Rice Varieties", image: placeholderImg, description: "Boosts stamina and energy, traditionally given to bridegrooms.", price_info: "₹170 / Kg" },
-  { id: "tr004", name: "Seeraga Samba Rice", category: "Traditional Rice Varieties", image: placeholderImg, description: "Aromatic short-grain rice, perfect for biryani and pulao. Easy to digest.", price_info: "₹220 / Kg" },
-  { id: "tr005", name: "Kattuyanam Rice (Elephant Rice)", category: "Traditional Rice Varieties", image: placeholderImg, description: "Tall growing rice, known for its resilience and health benefits, including fiber content.", price_info: "₹180 / Kg" },
-  // Spice Products
   {
-    id: "sp001",
-    name: "Organic Turmeric Powder (Manjal Podi)",
-    category: "Spice Products",
-    image: turmericPowderImg,
-    description: "High-curcumin organic turmeric powder, naturally processed.",
-    price_info: "₹80 / 100g",
+    id: "trv004",
+    name: "மாப்பிள்ளை சம்பா (Mapillai Samba Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Bridegroom Samba Rice", // Simplified
+    price_info: "₹180 / Kg"
   },
-  { id: "sp002", name: "Organic Coriander Powder (Malli Podi)", category: "Spice Products", image: placeholderImg, description: "Aromatic and flavorful, made from high-quality coriander seeds.", price_info: "₹70 / 100g" },
-  { id: "sp003", name: "Organic Cumin Powder (Seeragam Podi)", category: "Spice Products", image: placeholderImg, description: "Earthy and warm spice, aids digestion. Essential for Indian cooking.", price_info: "₹80 / 100g" },
-  { id: "sp004", name: "Organic Chili Powder (Milagai Podi)", category: "Spice Products", image: placeholderImg, description: "Pure and vibrant red chili powder for that perfect spice kick.", price_info: "₹100 / 100g" },
-  
-  // Pulse Varieties
-  { id: "pv001", name: "Bengal Gram (Kadalai Paruppu)", category: "Pulse Varieties", image: placeholderImg, description: "Rich in protein and fiber. Used in various Indian dishes and snacks.", price_info: "₹140 / Kg" },
-  { id: "pv002", name: "Black Gram (Ulundhu Paruppu)", category: "Pulse Varieties", image: placeholderImg, description: "Whole black gram, essential for idli, dosa, and vada. High in protein.", price_info: "₹160 / Kg" },
-  { id: "pv003", name: "Green Gram (Pasi Paruppu)", category: "Pulse Varieties", image: placeholderImg, description: "Split green gram, easy to digest, and a good source of protein.", price_info: "₹150 / Kg" },
-  { id: "pv004", name: "Toor Dal (Thuvaram Paruppu)", category: "Pulse Varieties", image: placeholderImg, description: "Commonly used lentil for sambar and dal dishes. Nutritious and tasty.", price_info: "₹180 / Kg" },
+  {
+    id: "trv005",
+    name: "கேரளா மட்டை (Kerala Matta Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Kerala Matta Rice",
+    price_info: "₹160 / Kg"
+  },
+  {
+    id: "trv006",
+    name: "தூயமல்லி (Thooyamalli Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Pure Jasmine Rice",
+    price_info: "₹170 / Kg"
+  },
+  {
+    id: "trv007",
+    name: "சீரகசம்பா அரிசி (Seeraga Samba Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Jeera Samba Rice",
+    price_info: "₹250 / Kg"
+  },
+  {
+    id: "trv008",
+    name: "கைக்குத்தல் அரிசி (Kaikuthal Arisi)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Hand-pounded Rice",
+    price_info: "₹150 / Kg"
+  },
+  {
+    id: "trv009",
+    name: "வெள்ளையன் அரிசி (Vellaiyan Arisi)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Replace
+    description: "Traditional White Rice",
+    price_info: "₹130 / Kg"
+  },
+  {
+    id: "trv010",
+    name: "சிவப்பு அரிசி (Sivappu Arisi)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Red Rice",
+    price_info: "₹140 / Kg"
+  },
+  {
+    id: "trv011",
+    name: "சீரக சம்பா குருணை (Seeraga Samba Kurunai)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use broken rice image
+    description: "Broken Jeera Samba Rice",
+    price_info: "₹120 / Kg"
+  },
+  {
+    id: "trv012",
+    name: "மாப்பிள்ளை சம்பா குருணை (Mapillai Samba Kurunai)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use broken rice image
+    description: "Broken Mapillai Samba Rice",
+    price_info: "₹100 / Kg"
+  },
+  {
+    id: "trv013",
+    name: "கருப்பு கவுனி குருணை (Karuppu Kavuni Kurunai)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use broken rice image
+    description: "Broken Black Kavuni Rice",
+    price_info: "₹110 / Kg"
+  },
+  {
+    id: "trv014",
+    name: "இலுப்பை பூ சம்பா (Iluppai Poo Samba Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Mahua Flower Samba Rice",
+    price_info: "₹280 / Kg"
+  },
+  {
+    id: "trv015",
+    name: "இரத்தசாலி (Rathasali Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Heritage Red Rice (Rathasali)",
+    price_info: "₹260 / Kg"
+  },
+  {
+    id: "trv016",
+    name: "கருப்பு கவுனி கஞ்சி மிக்ஸ் (Karuppu Kavuni Kanji Mix)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use kanji mix image
+    description: "Black Kavuni Porridge Mix",
+    price_info: "₹150 / 250g"
+  },
+  {
+    id: "trv017",
+    name: "மாப்பிள்ளை சம்பா புட்டு மாவு (Mapillai Samba Puttu Flour)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use puttu flour image
+    description: "Mapillai Samba Puttu Flour",
+    price_info: "₹130 / 500g"
+  },
+  {
+    id: "trv018",
+    name: "சிவன் சம்பா (Sivan Samba Rice)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg,
+    description: "Sacred Samba Rice (Sivan Samba)",
+    price_info: "₹240 / Kg"
+  },
+  {
+    id: "trv019",
+    name: "மாப்பிள்ளை சம்பா அவல் (Mapillai Samba Aval)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use aval image
+    description: "Flattened Mapillai Samba Rice",
+    price_info: "₹90 / 250g"
+  },
+  {
+    id: "trv020",
+    name: "கருப்பு கவுனி அவல் (Karuppu Kavuni Aval)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use aval image
+    description: "Flattened Black Kavuni Rice",
+    price_info: "₹100 / 250g"
+  },
+  {
+    id: "trv021",
+    name: "தூயமல்லி அவல் (Thooyamalli Aval)",
+    category: "Traditional Rice Varieties & Flours",
+    image: placeholderImg, // Use aval image
+    description: "Flattened Thooyamalli Rice",
+    price_info: "₹80 / 250g"
+  },
+  // --- Millets ---
+  {
+    id: "mil001",
+    name: "குதிரை வாலி (Kuthiraivali Millet)",
+    category: "Millets",
+    image: placeholderImg,
+    description: "Barnyard Millet",
+    price_info: "₹120 / Kg"
+  },
+  {
+    id: "mil002",
+    name: "சாமை (Saamai Millet)",
+    category: "Millets",
+    image: placeholderImg,
+    description: "Little Millet",
+    price_info: "₹130 / Kg"
+  },
+  {
+    id: "mil003",
+    name: "வரகு (Varagu Millet)",
+    category: "Millets",
+    image: placeholderImg,
+    description: "Kodo Millet",
+    price_info: "₹110 / Kg"
+  },
+  {
+    id: "mil004",
+    name: "திணை (Thinai Millet)",
+    category: "Millets",
+    image: placeholderImg,
+    description: "Foxtail Millet",
+    price_info: "₹125 / Kg"
+  },
+  // --- Natural Sweeteners & Honey ---
+  {
+    id: "swt001",
+    name: "நாட்டு சக்கரை (Naatu Sakkarai)",
+    category: "Natural Sweeteners & Honey",
+    image: placeholderImg,
+    description: "Country Sugar / Unrefined Cane Sugar",
+    price_info: "₹100 / Kg"
+  },
+  {
+    id: "swt002",
+    name: "பனை வெல்லம் (Panai Vellam)",
+    category: "Natural Sweeteners & Honey",
+    image: placeholderImg,
+    description: "Palm Jaggery",
+    price_info: "₹300 / Kg"
+  },
+  {
+    id: "swt003",
+    name: "பனங் கல்கண்டு (Panang Kalkandu)",
+    category: "Natural Sweeteners & Honey",
+    image: placeholderImg,
+    description: "Palm Sugar Crystals",
+    price_info: "₹350 / 500g"
+  },
+  {
+    id: "swt004",
+    name: "தேன் (Then)",
+    category: "Natural Sweeteners & Honey",
+    image: placeholderImg,
+    description: "Pure Natural Honey",
+    price_info: "₹400 / 500g"
+  },
 
-  // Herbal Health Products
-  { id: "hhp001", name: "Neem Leaf Powder (Veppilai Podi)", category: "Herbal Health Products", image: placeholderImg, description: "Powerful medicinal herb with antibacterial and antiviral properties.", price_info: "₹90 / 100g" },
-  { id: "hhp002", name: "Pure Aloe Vera Gel", category: "Herbal Health Products", image: placeholderImg, description: "Soothing and healing for skin. Can also be consumed for internal benefits.", price_info: "₹200 / 200g" },
-  { id: "hhp003", name: "Moringa Leaf Powder (Murungai Ilai Podi)", category: "Herbal Health Products", image: placeholderImg, description: "Superfood packed with vitamins, minerals, and antioxidants.", price_info: "₹150 / 100g" },
-  { id: "hhp004", name: "Hibiscus Flower Powder (Sembaruthi Poo Podi)", category: "Herbal Health Products", image: placeholderImg, description: "Promotes hair growth, controls blood pressure, and rich in Vitamin C.", price_info: "₹100 / 100g" },
-  
-  // Natural Soaps
-  { id: "ns001", name: "Shikakai Herbal Soap", category: "Natural Soaps", image: placeholderImg, description: "Traditional hair and body cleanser, promotes healthy scalp and skin.", price_info: "₹60 / piece" },
-  { id: "ns002", name: "Aritha (Soapnut) Soap", category: "Natural Soaps", image: placeholderImg, description: "Natural cleansing soap made from soapnuts, gentle on skin.", price_info: "₹65 / piece" },
-  { id: "ns003", name: "Herbal Bath Soap (Assorted)", category: "Natural Soaps", image: placeholderImg, description: "Handmade soap with a blend of natural herbs for a refreshing bath.", price_info: "₹70 / piece" },
-  
-  // Traditional Products (Jaggery)
+  // --- Spice Powders & Masalas ---
   {
-    id: "tpj001",
-    name: "Palm Jaggery (Panam Kalkandu)",
-    category: "Traditional Products (Jaggery)",
-    image: palmJaggeryImg,
-    description: "Pure and unrefined palm jaggery, a healthy alternative to sugar.",
-    price_info: "₹200 / 500g",
+    id: "spm001",
+    name: "மஞ்சள் தூள் (Manjal Thool)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Turmeric Powder",
+    price_info: "₹80 / 100g"
   },
-  { id: "tpj002", name: "Sugarcane Jaggery (Karumbu Vellam)", category: "Traditional Products (Jaggery)", image: placeholderImg, description: "Traditional sugarcane jaggery, a healthy alternative to white sugar.", price_info: "₹120 / Kg" },
-  { id: "tpj003", name: "Country Jaggery Powder (Nattu Sakkarai)", category: "Traditional Products (Jaggery)", image: placeholderImg, description: "Powdered form of country jaggery, easy to use in beverages and sweets.", price_info: "₹140 / Kg" },
+  {
+    id: "spm002",
+    name: "மிளகாய் தூள் (Milagai Thool)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Chili Powder",
+    price_info: "₹90 / 100g"
+  },
+  {
+    id: "spm003",
+    name: "மல்லி தூள் (Malli Thool)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Coriander Powder",
+    price_info: "₹70 / 100g"
+  },
+  {
+    id: "spm004",
+    name: "சாம்பார் தூள் (Sambar Thool)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Sambar Powder Mix",
+    price_info: "₹120 / 200g"
+  },
+  {
+    id: "spm005",
+    name: "ரசம் தூள் (Rasam Thool)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Rasam Powder Mix",
+    price_info: "₹110 / 150g"
+  },
+  {
+    id: "spm006",
+    name: "குழம்பு மசாலா (Kuzhambu Masala)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Curry Masala Powder",
+    price_info: "₹130 / 200g"
+  },
+  {
+    id: "spm007",
+    name: "சிக்கன் மசாலா (Chicken Masala)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Chicken Masala Powder",
+    price_info: "₹100 / 100g"
+  },
+  {
+    id: "spm008",
+    name: "மட்டன் மசாலா (Mutton Masala)",
+    category: "Spice Powders & Masalas",
+    image: placeholderImg,
+    description: "Mutton Masala Powder",
+    price_info: "₹110 / 100g"
+  },
 
-  // Traditional Grains & Millets
-  { id: "tgm001", name: "Kodo Millet (Varagu Arisi)", category: "Traditional Grains & Millets", image: placeholderImg, description: "Easily digestible millet, good for controlling blood sugar. Gluten-free.", price_info: "₹100 / Kg" },
-  { id: "tgm002", name: "Foxtail Millet (Thinai Arisi)", category: "Traditional Grains & Millets", image: placeholderImg, description: "Rich in protein and fiber, helps in maintaining body temperature.", price_info: "₹110 / Kg" },
-  { id: "tgm003", name: "Finger Millet (Ragi / Kezhvaragu)", category: "Traditional Grains & Millets", image: placeholderImg, description: "Excellent source of calcium and iron. Widely used for porridge and rotis.", price_info: "₹90 / Kg" },
-  { id: "tgm004", name: "Little Millet (Samai Arisi)", category: "Traditional Grains & Millets", image: placeholderImg, description: "Smallest of millets, packed with nutrients and good for weight management.", price_info: "₹120 / Kg" },
-  { id: "tgm005", name: "Barnyard Millet (Kuthiraivali Arisi)", category: "Traditional Grains & Millets", image: placeholderImg, description: "High in fiber and iron, good alternative to rice, especially for diabetics.", price_info: "₹115 / Kg" },
+  // --- Cold-Pressed Oils & Ghee ---
+  {
+    id: "cpg001",
+    name: "நெய் - நாட்டு மாடு (Ghee – Native Cow Ghee)",
+    category: "Cold-Pressed Oils & Ghee",
+    image: placeholderImg,
+    description: "Native Cow Ghee",
+    price_info: "₹800 / 500ml"
+  },
+  {
+    id: "cpg002",
+    name: "கடலை எண்ணெய் (Kadalai Ennai)",
+    category: "Cold-Pressed Oils & Ghee",
+    image: placeholderImg,
+    description: "Groundnut Oil / Peanut Oil",
+    price_info: "₹340 / Litre"
+  },
+  {
+    id: "cpg003",
+    name: "தேங்காய் எண்ணெய் (Thengai Ennai)",
+    category: "Cold-Pressed Oils & Ghee",
+    image: placeholderImg,
+    description: "Coconut Oil",
+    price_info: "₹360 / Litre"
+  },
+  {
+    id: "cpg004",
+    name: "விளக்கெண்ணெய் (Vilakku Ennai)",
+    category: "Cold-Pressed Oils & Ghee",
+    image: placeholderImg, // Often Castor Oil, but can be Gingelly for lamps. Clarify usage.
+    description: "Castor Oil",
+    price_info: "₹280 / 500ml"
+  },
+  {
+    id: "cpg005",
+    name: "நல்லெண்ணெய் (Nallenai)",
+    category: "Cold-Pressed Oils & Ghee",
+    image: placeholderImg,
+    description: "Gingelly Oil / Sesame Oil",
+    price_info: "₹390 / Litre"
+  },
 
-  // Millet & Rice Noodles
-  { id: "mrn001", name: "Traditional Rice Noodles (Arisi Sevai)", category: "Millet & Rice Noodles", image: placeholderImg, description: "Plain rice noodles, perfect for a light meal with various accompaniments.", price_info: "₹80 / 200g pack" },
-  { id: "mrn002", name: "Kodo Millet Noodles (Varagu Sevai)", category: "Millet & Rice Noodles", image: placeholderImg, description: "Healthy and tasty noodles made from Kodo millet. Quick to cook.", price_info: "₹90 / 180g pack" },
-  { id: "mrn003", name: "Finger Millet Noodles (Ragi Sevai)", category: "Millet & Rice Noodles", image: placeholderImg, description: "Nutritious noodles made from Ragi, rich in calcium.", price_info: "₹95 / 180g pack" },
-  { id: "mrn004", name: "Little Millet Noodles (Samai Sevai)", category: "Millet & Rice Noodles", image: placeholderImg, description: "Light and healthy noodles from Little Millet.", price_info: "₹100 / 180g pack" },
+  // --- Dals & Pulses (Paruppu & Payaru) ---
+  {
+    id: "dpp001",
+    name: "பாசிப்பருப்பு (Pasiparuppu)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "Moong Dal / Split Green Gram",
+    price_info: "₹160 / Kg"
+  },
+  {
+    id: "dpp002",
+    name: "துவரம் பருப்பு (Thuvaram Paruppu)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "Toor Dal / Pigeon Peas",
+    price_info: "₹190 / Kg"
+  },
+  {
+    id: "dpp003",
+    name: "கொள்ளு (Kollu)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "Horse Gram",
+    price_info: "₹150 / Kg"
+  },
+  {
+    id: "dpp004",
+    name: "உளுந்து (Ulundhu)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "Black Gram / Urad Dal",
+    price_info: "₹170 / Kg"
+  },
+  {
+    id: "dpp005",
+    name: "சுண்டல் கடலை (Sundal Kadalai)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "Brown Chana / Whole Bengal Gram",
+    price_info: "₹140 / Kg"
+  },
+  {
+    id: "dpp006",
+    name: "வெள்ளை சுண்டல் கடலை (Vellai Sundal Kadalai)",
+    category: "Dals & Pulses (Paruppu & Payaru)",
+    image: placeholderImg,
+    description: "White Chana / White Chickpeas",
+    price_info: "₹150 / Kg"
+  },
 
-  // Honey & Natural Sweeteners
-  { id: "hns001", name: "Pure Forest Honey (Malai Thaen)", category: "Honey & Natural Sweeteners", image: placeholderImg, description: "Raw, unprocessed honey collected from wild forest hives. Rich in enzymes.", price_info: "₹450 / 500g" },
-
+  // --- Herbal & Special Products ---
+  {
+    id: "hsp001",
+    name: "ஹேர் ஆயில் (Hair Oil)",
+    category: "Herbal & Special Products",
+    image: placeholderImg,
+    description: "Herbal Hair Oil",
+    price_info: "₹250 / 200ml"
+  },
+  {
+    id: "hsp002",
+    name: "பழங்கள் கண்டு பொடி (Pazhangal Kandu Podi)",
+    category: "Herbal & Special Products",
+    image: placeholderImg,
+    description: "Herbal Fruit & Roots Powder Mix",
+    price_info: "₹180 / 100g"
+  },
   
 ];
