@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         )}
         <a
           href="tel:+919791910054" // REPLACE WITH YOUR MAIN ORDERING PHONE NUMBER
-          className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white font-medium py-2 px-3 sm:px-4 rounded-md transition duration-150 text-sm sm:text-base"
+          className="block w-full text-center bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-medium py-2 px-3 sm:px-4 rounded-md transition duration-150 text-sm sm:text-base"
         >
           Call to Order
         </a>
