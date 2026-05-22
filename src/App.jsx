@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import FeatureSection from "./components/FeatureSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -7,6 +8,7 @@ import OrderingSection  from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Workflow from "./components/Workflow";
 import ProductsPage from './pages/ProductsPage';
+import CartPage from './pages/CartPage';
 
 const HomePageLayout  = () => {
   return (
@@ -26,11 +28,14 @@ const HomePageLayout  = () => {
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePageLayout />} />
-      <Route path="/products" element={<ProductsPage />} />
-      {/* You can add more routes here later, e.g., /about, /contact-page */}
-    </Routes>
+    <CartProvider>
+      <Routes>
+        <Route path="/" element={<HomePageLayout />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        {/* You can add more routes here later, e.g., /about, /contact-page */}
+      </Routes>
+    </CartProvider>
   );
 };
 

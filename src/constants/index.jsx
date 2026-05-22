@@ -134,15 +134,15 @@ export const checklistItems = [
 export const orderingOptions  = [
   {
     title: "Visit Our Store",
-    price: "Find us at:", // Or remove price line
+    price: "Find us at:",
     features: [
       "270, Ranga Konar St, Kattoor Main, Kattoor",
       "Open: Mon-Sat, 9 AM - 7 PM",
       "Browse our full range of fresh products",
       "Friendly advice and service",
     ],
-    actionText: "Get Directions", // Button text
-    actionLink: "https://www.google.com/maps/place/270,+Ranga+Konar+St,+Kattoor+Main,+Kattoor,+Ram+Nagar,+Coimbatore,+Tamil+Nadu+641009/@11.0078195,76.9644407,19z/data=!4m6!3m5!1s0x3ba859a9fb636f15:0x20f59ebef007ac22!8m2!3d11.0077086!4d76.9646854!16s%2Fg%2F11rg64wkp4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" // Link to Google Maps or contact section
+    actionText: "Get Directions",
+    actionLink: "https://www.google.com/maps/place/270,+Ranga+Konar+St,+Kattoor+Main,+Kattoor,+Ram+Nagar,+Coimbatore,+Tamil+Nadu+641009/@11.0078195,76.9644407,19z/data=!4m6!3m5!1s0x3ba859a9fb636f15:0x20f59ebef007ac22!8m2!3d11.0077086!4d76.9646854!16s%2Fg%2F11rg64wkp4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     title: "Order by Phone",
@@ -639,3 +639,55 @@ export const products = [
   },
   
 ];
+
+// Helper function to add quantities to products based on category
+const getQuantitiesForProduct = (product) => {
+  const basePrice = parseInt(product.price_info.match(/₹(\d+)/)[1]);
+  const category = product.category;
+  
+  // Define quantities based on category
+  let quantities = [];
+  
+  if (category.includes("Rice") || category.includes("Millet") || category.includes("Pulses") || category.includes("Dals")) {
+    quantities = [
+      { id: `${product.id}-500g`, size: "500g", price: `₹${Math.round(basePrice * 0.5)}`, available: true },
+      { id: `${product.id}-1kg`, size: "1 Kg", price: `₹${basePrice}`, available: true },
+      { id: `${product.id}-2kg`, size: "2 Kg", price: `₹${Math.round(basePrice * 1.9)}`, available: false },
+    ];
+  } else if (category.includes("Oil") || category.includes("Ghee")) {
+    quantities = [
+      { id: `${product.id}-250ml`, size: "250ml", price: `₹${Math.round(basePrice * 0.5)}`, available: true },
+      { id: `${product.id}-500ml`, size: "500ml", price: `₹${basePrice}`, available: true },
+      { id: `${product.id}-1l`, size: "1 Litre", price: `₹${Math.round(basePrice * 1.95)}`, available: false },
+    ];
+  } else if (category.includes("Spice") || category.includes("Masala")) {
+    quantities = [
+      { id: `${product.id}-50g`, size: "50g", price: `₹${Math.round(basePrice * 0.5)}`, available: true },
+      { id: `${product.id}-100g`, size: "100g", price: `₹${basePrice}`, available: true },
+      { id: `${product.id}-250g`, size: "250g", price: `₹${Math.round(basePrice * 2.3)}`, available: false },
+    ];
+  } else if (category.includes("Sweetener") || category.includes("Honey")) {
+    quantities = [
+      { id: `${product.id}-250g`, size: "250g", price: `₹${Math.round(basePrice * 0.6)}`, available: true },
+      { id: `${product.id}-500g`, size: "500g", price: `₹${basePrice}`, available: true },
+      { id: `${product.id}-1kg`, size: "1 Kg", price: `₹${Math.round(basePrice * 1.9)}`, available: false },
+    ];
+  } else {
+    // Default for other categories
+    quantities = [
+      { id: `${product.id}-std`, size: "Standard", price: product.price_info.split("/")[0].trim(), available: true },
+    ];
+  }
+  
+  return quantities;
+};
+
+// Enrich products with quantities and availability status
+export const enrichedProducts = products.map((product, index) => ({
+  ...product,
+  isAvailable: index % 3 !== 0, // Sample: every 3rd product is out of stock
+  quantities: getQuantitiesForProduct(product),
+}));
+
+// Export the enriched products as the main products list
+export const productsWithQuantities = enrichedProducts;
