@@ -172,9 +172,9 @@ export const orderingOptions  = [
 
 export const resourcesLinks = [
   { href: "#philosophy", text: "Our Philosophy" },
-  { href: "#", text: "About Nammalvar (Link to external resource or new page)" },
+  { href: "#footer", text: "About Nammalvar" },
   { href: "#testimonials", text: "Customer Stories" },
-  { href: "#", text: "Blog/Health Tips (Future)" },
+  { href: "#footer", text: "Contact" },
 ];
 
 export const productHighlightsLinks = [
@@ -186,9 +186,9 @@ export const productHighlightsLinks = [
 ];
 
 export const communityLinks = [
-  { href: "#footer", text: "Contact Us" }, // Assuming contact info is in footer
-  { href: "#", text: "Visit Our Store" },
-  { href: "#", text: "Events & Workshops (Future)" },
+  { href: "#footer", text: "Contact Us" },
+  { href: "#footer", text: "Location" },
+  { href: "#footer", text: "Our Products" },
   { href: "https://www.facebook.com/share/g/1BVXUpAk3F/", text: "Facebook" },
   { href: "https://www.instagram.com/nammalvar_organic_farming1/", text: "Instagram" },
 ];
@@ -239,7 +239,7 @@ export const products = [
     id: "trv002",
     name: "கருங் குருவை (Karung Kuruvai Rice)",
     category: "Traditional Rice Varieties & Flours",
-    image: blackRiceImg,
+    image: placeholderImg,
     description: "Black Kuruvai Rice", // Simplified
     price_info: "₹200 / Kg"
   },
@@ -311,7 +311,7 @@ export const products = [
     id: "trv011",
     name: "சீரக சம்பா குருணை (Seeraga Samba Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: blackRiceImg, // Use broken rice image
+    image: placeholderImg, // Use broken rice image
     description: "Broken Jeera Samba Rice",
     price_info: "₹120 / Kg"
   },
@@ -319,7 +319,7 @@ export const products = [
     id: "trv012",
     name: "மாப்பிள்ளை சம்பா குருணை (Mapillai Samba Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: redRiceImg, // Use broken rice image
+    image: placeholderImg, // Use broken rice image
     description: "Broken Mapillai Samba Rice",
     price_info: "₹100 / Kg"
   },
@@ -327,7 +327,7 @@ export const products = [
     id: "trv013",
     name: "கருப்பு கவுனி குருணை (Karuppu Kavuni Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: blackRiceImg, // Use broken rice image
+    image: placeholderImg, // Use broken rice image
     description: "Broken Black Kavuni Rice",
     price_info: "₹110 / Kg"
   },

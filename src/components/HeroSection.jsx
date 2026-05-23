@@ -9,7 +9,7 @@ const Herosection = () => {
         <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">Nammalvar Eyarkaiyagam 
             <span className="bg-gradient-to-r from-green-600 to-green-700 text-transparent bg-clip-text">{" "} Greetings!</span>
         </h1>
-        <p className="mt-10 text-lg text-center text-neutral-500 max-x-4xl">
+        <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
             Your trusted source for completely organic, traditional farm products in Coimbatore. We offer a wide range of cold-pressed oils, ancient rice varieties, natural spices, pulses, herbal health items, and more, all cultivated following the profound principles of natural farming advocate Thiru. Nammalvar.
         </p>
         <div className="flex flex-wrap justify-center my-10 gap-4 px-4">

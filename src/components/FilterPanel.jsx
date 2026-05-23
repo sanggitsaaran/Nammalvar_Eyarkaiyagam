@@ -18,35 +18,38 @@ const FilterPanel = ({ categories, filters, onFilterChange, onResetFilters, isMo
   return (
     <div className={`${
       isMobile 
-        ? 'fixed inset-0 z-40 bg-black/50 overflow-y-auto' 
+        ? 'fixed inset-0 z-50 bg-black/50 overflow-y-auto' 
         : 'relative'
     }`}>
-      {isMobile && (
-        <div className="sticky top-0 bg-neutral-900 border-b border-neutral-700 p-4 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-white">Filters</h3>
-          <button onClick={onClose} className="text-neutral-400 hover:text-white">
-            <X size={24} />
-          </button>
-        </div>
-      )}
-      
       <div className={`${
         isMobile 
           ? 'bg-neutral-900 p-6' 
           : 'bg-neutral-800 rounded-lg border border-neutral-700 p-6 sticky top-20 max-h-screen overflow-y-auto'
       }`}>
         <div className="space-y-6">
-          {/* Header */}
+          {/* Header with Close Button */}
           <div className="flex justify-between items-center">
             <h2 className="text-lg font-semibold text-white">Filters</h2>
-            {hasActiveFilters && (
-              <button
-                onClick={onResetFilters}
-                className="text-xs text-green-400 hover:text-green-300 underline transition"
-              >
-                Reset All
-              </button>
-            )}
+            <div className="flex items-center gap-2">
+              {hasActiveFilters && (
+                <button
+                  onClick={onResetFilters}
+                  className="text-xs text-green-400 hover:text-green-300 underline transition"
+                >
+                  Reset All
+                </button>
+              )}
+              {onClose && (
+                <button 
+                  onClick={onClose} 
+                  className="text-white hover:text-red-400 hover:bg-neutral-700 p-1 rounded transition-all flex-shrink-0"
+                  title="Close filters"
+                  aria-label="Close filter panel"
+                >
+                  <X size={24} />
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Category Filter */}
