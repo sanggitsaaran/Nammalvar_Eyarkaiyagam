@@ -231,7 +231,7 @@ export const products = [
     id: "trv001",
     name: "கருப்பு கவுனி (Karuppu Kavuni Rice)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg,
+    image: blackRiceImg,
     description: "Black Kavuni Rice", // Simplified
     price_info: "₹220 / Kg"
   },
@@ -239,7 +239,7 @@ export const products = [
     id: "trv002",
     name: "கருங் குருவை (Karung Kuruvai Rice)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg,
+    image: blackRiceImg,
     description: "Black Kuruvai Rice", // Simplified
     price_info: "₹200 / Kg"
   },
@@ -303,7 +303,7 @@ export const products = [
     id: "trv010",
     name: "சிவப்பு அரிசி (Sivappu Arisi)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg,
+    image: redRiceImg,
     description: "Red Rice",
     price_info: "₹140 / Kg"
   },
@@ -311,7 +311,7 @@ export const products = [
     id: "trv011",
     name: "சீரக சம்பா குருணை (Seeraga Samba Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg, // Use broken rice image
+    image: blackRiceImg, // Use broken rice image
     description: "Broken Jeera Samba Rice",
     price_info: "₹120 / Kg"
   },
@@ -319,7 +319,7 @@ export const products = [
     id: "trv012",
     name: "மாப்பிள்ளை சம்பா குருணை (Mapillai Samba Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg, // Use broken rice image
+    image: redRiceImg, // Use broken rice image
     description: "Broken Mapillai Samba Rice",
     price_info: "₹100 / Kg"
   },
@@ -327,7 +327,7 @@ export const products = [
     id: "trv013",
     name: "கருப்பு கவுனி குருணை (Karuppu Kavuni Kurunai)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg, // Use broken rice image
+    image: blackRiceImg, // Use broken rice image
     description: "Broken Black Kavuni Rice",
     price_info: "₹110 / Kg"
   },
@@ -343,7 +343,7 @@ export const products = [
     id: "trv015",
     name: "இரத்தசாலி (Rathasali Rice)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg,
+    image: redRiceImg,
     description: "Heritage Red Rice (Rathasali)",
     price_info: "₹260 / Kg"
   },
@@ -383,7 +383,7 @@ export const products = [
     id: "trv020",
     name: "கருப்பு கவுனி அவல் (Karuppu Kavuni Aval)",
     category: "Traditional Rice Varieties & Flours",
-    image: placeholderImg, // Use aval image
+    image: blackRiceImg, // Use aval image
     description: "Flattened Black Kavuni Rice",
     price_info: "₹100 / 250g"
   },
@@ -441,7 +441,7 @@ export const products = [
     id: "swt002",
     name: "பனை வெல்லம் (Panai Vellam)",
     category: "Natural Sweeteners & Honey",
-    image: placeholderImg,
+    image: palmJaggeryImg,
     description: "Palm Jaggery",
     price_info: "₹300 / Kg"
   },
@@ -449,7 +449,7 @@ export const products = [
     id: "swt003",
     name: "பனங் கல்கண்டு (Panang Kalkandu)",
     category: "Natural Sweeteners & Honey",
-    image: placeholderImg,
+    image: palmJaggeryImg,
     description: "Palm Sugar Crystals",
     price_info: "₹350 / 500g"
   },
@@ -467,7 +467,7 @@ export const products = [
     id: "spm001",
     name: "மஞ்சள் தூள் (Manjal Thool)",
     category: "Spice Powders & Masalas",
-    image: placeholderImg,
+    image: turmericPowderImg,
     description: "Turmeric Powder",
     price_info: "₹80 / 100g"
   },
@@ -549,7 +549,7 @@ export const products = [
     id: "cpg003",
     name: "தேங்காய் எண்ணெய் (Thengai Ennai)",
     category: "Cold-Pressed Oils & Ghee",
-    image: placeholderImg,
+    image: coconutOilImg,
     description: "Coconut Oil",
     price_info: "₹360 / Litre"
   },
@@ -565,7 +565,7 @@ export const products = [
     id: "cpg005",
     name: "நல்லெண்ணெய் (Nallenai)",
     category: "Cold-Pressed Oils & Ghee",
-    image: placeholderImg,
+    image: sesameOilImg,
     description: "Gingelly Oil / Sesame Oil",
     price_info: "₹390 / Litre"
   },

@@ -14,7 +14,7 @@ const HomePageLayout  = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
+      <div className="max-w-7xl mx-auto pt-20 px-3 sm:px-6">
         <HeroSection />
         <FeatureSection id="products-overview" />
         <Workflow id="philosophy" />

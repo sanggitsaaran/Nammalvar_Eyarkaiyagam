@@ -12,25 +12,25 @@ const Herosection = () => {
         <p className="mt-10 text-lg text-center text-neutral-500 max-x-4xl">
             Your trusted source for completely organic, traditional farm products in Coimbatore. We offer a wide range of cold-pressed oils, ancient rice varieties, natural spices, pulses, herbal health items, and more, all cultivated following the profound principles of natural farming advocate Thiru. Nammalvar.
         </p>
-        <div className="flex justify-center my-10">
-            <a href="#products" className="bg-gradient-to-r from-green-600 to-green-700 py-3 px-4 mx-3 rounded-md">Explore Our Products</a>
-            <a href="#footer" className="py-3 px-4 mx-3 rounded border">Contact Us to Order</a>
+        <div className="flex flex-wrap justify-center my-10 gap-4 px-4">
+            <a href="#products" className="bg-gradient-to-r from-green-600 to-green-700 py-3 px-6 rounded-md text-sm sm:text-base">Explore Our Products</a>
+            <a href="#footer" className="py-3 px-6 rounded border text-sm sm:text-base">Contact Us to Order</a>
         </div>
-        <div className="flex mt-10 justify-center">
-            <img src={farmImage1} alt="Fresh organic produce" className="rounded-lg w-1/2 border border-green-700 shadow-sm shadow-green-400 mx-2 my-4" />
-            {/* <video autoPlay loop muted className="rounded-lg w-1/2 border-green-700 shadow-green-400 mx-2 my-4">
+        <div className="flex flex-col lg:flex-row mt-10 justify-center gap-3 sm:gap-4 px-4">
+            <img src={farmImage1} alt="Fresh organic produce" className="rounded-lg w-full lg:w-1/2 border border-green-700 shadow-sm shadow-green-400" />
+            {/* <video autoPlay loop muted className="rounded-lg w-full lg:w-1/2 border-green-700 shadow-green-400">
                 <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
             </video> */}
-            <img src={farmImage2} alt="Fresh organic produce" className="rounded-lg w-1/2 border border-green-700 shadow-sm shadow-green-400 mx-2 my-4" />
-            {/* <video autoPlay loop muted className="rounded-lg w-1/2 border-green-700 shadow-green-400 mx-2 my-4">
+            <img src={farmImage2} alt="Fresh organic produce" className="rounded-lg w-full lg:w-1/2 border border-green-700 shadow-sm shadow-green-400" />
+            {/* <video autoPlay loop muted className="rounded-lg w-full lg:w-1/2 border-green-700 shadow-green-400">
                 <source src={video2} type="video/mp4" />
                 Your browser does not support the video tag.
             </video> */}
         </div>
-        <div className="mt-10 p-6 bg-blue-600 text-white rounded-lg shadow-lg text-center max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-2">Special Announcement!</h3>
-            <p className="text-md">
+        <div className="mt-10 p-4 sm:p-6 bg-blue-600 text-white rounded-lg shadow-lg text-center max-w-2xl mx-auto">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Special Announcement!</h3>
+            <p className="text-sm sm:text-base">
                 To order Nattu (traditional) varieties, call the numbers provided:
                 +91 XXXXX XXXXX / +91 XXXXX XXXXX.
                 Orders worth 2 thousand or more will receive a special discount!

@@ -76,12 +76,12 @@ const ProductsPage = () => {
           </div>
 
           {/* Main Content: Filter Panel + Products Grid */}
-          <div className="flex gap-4 md:gap-8 items-start">
+          <div className="flex gap-4 lg:gap-8 items-start">
             {/* Mobile Filter Button */}
             {!showMobileFilter && (
               <button
                 onClick={() => setShowMobileFilter(true)}
-                className="md:hidden fixed bottom-24 right-4 bg-green-600 hover:bg-green-700 text-white p-3 sm:p-4 rounded-full shadow-lg z-30 flex items-center justify-center gap-2 transition-all flex-shrink-0"
+                className="lg:hidden fixed bottom-24 right-3 sm:right-4 bg-green-600 hover:bg-green-700 text-white p-3 sm:p-4 rounded-full shadow-lg z-30 flex items-center justify-center gap-2 transition-all flex-shrink-0"
                 title="Open filters"
               >
                 <Filter size={20} />
@@ -101,7 +101,7 @@ const ProductsPage = () => {
             )}
 
             {/* Desktop Filter Panel */}
-            <div className="hidden md:block w-56 flex-shrink-0">
+            <div className="hidden lg:block w-56 flex-shrink-0">
               <FilterPanel
                 categories={productCategories}
                 filters={filters}
@@ -143,7 +143,7 @@ const ProductsPage = () => {
                         <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-green-400 border-b-2 border-green-600 pb-2 sm:pb-3 mb-6 sm:mb-8">
                           {category}
                         </h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 lg:gap-6">
                           {productsInCategory.map((product) => (
                             <ProductCard key={product.id} product={product} />
                           ))}
